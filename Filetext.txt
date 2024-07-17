@@ -1,0 +1,5 @@
+text = """Trong những ngày hè oi bức, một cơn mưa rào đột ngột xuất hiện làm không khí trở nên dễ chịu hơn.
+Những giọt mưa rơi tí tách trên mái nhà, tạo nên một giai điệu tự nhiên và thư giãn.
+Cây cối như được tưới mát, xanh tươi hơn sau cơn mưa.
+Đường phố trở nên yên tĩnh khi mọi người tìm chỗ trú mưa.
+Sau cơn mưa, bầu trời quang đãng hơn, một cầu vồng lung linh xuất hiện trên nền trời xanh thẳm."""
