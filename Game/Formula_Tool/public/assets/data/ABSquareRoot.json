@@ -1,0 +1,100 @@
+{
+    "Points": {
+        "1": { "x": 100, "y": 100 },
+        "2": { "x": 100, "y": 350 },
+        "3": { "x": 350, "y": 350 },
+        "4": { "x": 350, "y": 100 }
+    },
+    "Edges": {
+        "1": {
+            "PointStart": 1,
+            "PointEnd": 4,
+            "Ratios": [0.5, 0.5]
+        },
+        "2": {
+            "PointStart": 1,
+            "PointEnd": 4,
+            "Ratios": [0.5, 0.5]
+        },
+        "3": {
+            "PointStart": 1,
+            "PointEnd": 2,
+            "Ratios": [0.5, 0.5]
+        },
+        "4": {
+            "PointStart": 3,
+            "PointEnd": 2,
+            "Ratios": [0.5, 0.5]
+        },
+        "5": {
+            "PointStart": 2,
+            "PointEnd": 3,
+            "Ratios": [0.5, 0.5]
+        }
+    },
+    "Steps": [
+        {
+            "Function": "SplitEdgeAnimation",
+            "EdgeId": 1,
+            "Color": "0xff00ff",
+            "Duration": 300
+        },
+        {
+            "Function": "SplitEdgeNoAnimation",
+            "EdgeId": 2,
+            "Color": "0x00ffff",
+            "Duration": 300
+        },
+        {
+            "Function": "RotateEdge",
+            "EdgeId": 2,
+            "ratioPointAxis": 0,
+            "Angle": 90,
+            "Duration": 500
+        },
+        {
+            "Function": "SplitEdgeNoAnimation",
+            "EdgeId": 3,
+            "Color": "0x00ff00",
+            "Duration": 300
+        },
+        {
+            "Function": "RotateEdge",
+            "EdgeId": 3,
+            "ratioPointAxis": 1,
+            "Angle": 90,
+            "Duration": 500
+        },
+        {
+            "Function": "SplitEdgeNoAnimation",
+            "EdgeId": 4,
+            "Color": "0x0000ff",
+            "Duration": 300
+        },
+        {
+            "Function": "DeleteEdge",
+            "EdgeId": 3,
+            "Duration": 200
+        },
+        {
+            "Function": "RotateEdge",
+            "EdgeId": 4,
+            "ratioPointAxis": 0.5,
+            "Angle": 180,
+            "Duration": 700
+        },
+        {
+            "Function": "SplitEdgeNoAnimation",
+            "EdgeId": 5,
+            "Color": "0xffaa00",
+            "Duration": 300
+        },
+        {
+            "Function": "RotateEdge",
+            "EdgeId": 5,
+            "ratioPointAxis": 1,
+            "Angle": 90,
+            "Duration": 500
+        }
+    ]
+}

@@ -1,12 +1,12 @@
 
-export class PreloadFishing extends Phaser.Scene {
+export class LoadingScene extends Phaser.Scene {
     constructor() {
-        super("PreloadFishing");
+        super("LoadingScene");
     }
 
     preload() {
         // Load JSON chứa danh sách frame
-        this.load.json("data", "assets/data/formula-data.json");
+        this.load.json("data", "assets/data/ABSquareRootNew.json");
 
         let progressBar = this.add.graphics();
         let progressBox = this.add.graphics();
@@ -40,6 +40,6 @@ export class PreloadFishing extends Phaser.Scene {
         const data = this.cache.json.get("data");
         console.log("✅ JSON Loaded:", data);
 
-        this.scene.start("SquareGridScene", { data });
+        this.scene.start("GeoEngine", data);
     }
 }

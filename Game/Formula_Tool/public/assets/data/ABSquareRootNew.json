@@ -1,0 +1,169 @@
+{
+    "entities": [
+        {
+            "id": 1,
+            "type": "edge",
+            "data": {
+                "start": {"type": "point", "data": {"x": 0, "y": 0}},
+                "end": {"type": "point", "data": {"x": 100, "y": 0}}
+            }  
+        },
+        {
+            "id": 2,
+            "type": "edge",
+            "data": {
+                "start":  { "type": "point", "data": {"x": 0, "y": 0}},
+                "end": { "type": "point", "data": {"x": 100, "y": 0}}
+            }
+        },
+        {
+            "id": 3,
+            "type": "edge",
+            "data": {
+                "start":  { "type": "point", "data": {"x": 0, "y": 0}},
+                "end": { "type": "point", "data": {"x": 0, "y": 100}}
+            }
+        },
+        {
+            "id": 4,
+            "type": "edge",
+            "data": {
+                "start":  { "type": "point", "data": {"x": 0, "y": 100}},
+                "end": { "type": "point", "data": {"x": 100, "y": 100}}
+            }
+        },
+        {
+            "id": 5,
+            "type": "edge",
+            "data": {
+                "start":  { "type": "point", "data": {"x": 0, "y": 100}},
+                "end": { "type": "point", "data": {"x": 100, "y": 100}}
+            }
+        }
+    ],
+    "steps": [
+        {
+            "index": 1,
+            "description": "Vẽ cạnh đầu tiên",
+            "entities": [1],
+            "action": {
+                "name": "draw",
+                "data": {
+                    "color": "0x000000"
+                }
+            },
+            "duration": 1000
+        },
+        {
+            "index": 2,
+            "description": "Vẽ cạnh thứ 2",
+            "entities": [2],
+            "action": {
+                "name": "draw",
+                "data": {
+                    "color": "0x00ff00"
+                }
+            },
+            "duration": 1000
+        },
+        {
+            "index": 3,
+            "description": "Quay cạnh thứ 2 90 theo ngược chiều kim đồng hồ 180 độ, neo tại điểm start",
+            "entities": [2],
+            "action": {
+                "name": "rotate",
+                "data": {
+                    "axisPoint": 0,
+                    "angle": 90
+                }
+            },
+            "duration": 1000
+        },
+        {
+            "index": 4,
+            "description": "Vẽ cạnh thứ 3",
+            "entities": [3],
+            "action": {
+                "name": "draw",
+                "data": {
+                    "color": "0xffa500"
+                }
+            },
+            "duration": 1000
+        },
+        {
+            "index": 5,
+            "description": "Xoay cạnh thứ 3 1 góc 90 độ lấy điểm neo tạo end",
+            "entities": [3],
+            "action": {
+                "name": "rotate",
+                "data": {
+                    "axisPoint": 1,
+                    "angle": 90 
+                }
+            },
+            "duration": 1000
+        },
+        {
+            "index": 6,
+            "description": "Vẽ cạnh thứ 4 trên cạnh thứ 3",
+            "entities": [4],
+            "action": {
+                "name": "draw",
+                "data": {
+                     "color": "0xffa500"
+                }
+            },
+            "duration": 0
+        },
+        {
+            "index": 7,
+            "description": "xóa cạnh 3 ngay lập tức",
+            "entities": [3],
+            "action": {
+                "name": "invisible",
+                "data": {
+                }
+            },
+            "duration": 0
+        },
+        {
+            "index": 8,
+            "description": "xoay cạnh 4 góc 180 lấy neo là tại tâm",
+            "entities": [4],
+            "action": {
+                "name": "rotate",
+                "data": {
+                    "axisPoint": 0.5,
+                    "angle": 180
+                }
+            },
+            "duration": 1000
+        },
+        {
+            "index": 9,
+            "description": "Vẽ cạnh 5 trên cạnh 4 ngay lập tức",
+            "entities": [5],
+            "action": {
+                "name": "draw",
+                "data": {
+                    "color": "0x800080"
+                }
+            },
+            "duration": 0
+        },
+        {
+            "index": 10,
+            "description": "xoay cạnh 5 một góc 90 độ lấy điểm neo tại end",
+            "entities": [5],
+            "action": {
+                "name": "rotate",
+                "data": {
+                    "axisPoint": 1,
+                    "angle": 90
+                }
+            },
+            "duration": 1000
+        }
+    ]
+}

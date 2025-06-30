@@ -1,8 +1,3 @@
-export default interface DrawableForCell {
-    draw(startX: number,
-        startY: number,
-        h: number,
-        w: number,
-        ratioCols: number[],
-        ratioRows: number[]): void;
+export default interface Drawable {
+    draw(color: number, duration: number): void;
 }

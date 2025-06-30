@@ -1,8 +1,3 @@
-export default interface FillableForCell {
-    fill(x: number,
-        y: number,
-        w: number,
-        h: number,
-        color: number,
-        duration: number): void;
+export default interface Fillable {
+    fill(color: number, duration: number): void;
 }

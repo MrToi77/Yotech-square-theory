@@ -1,0 +1,26 @@
+{
+    "Data": {
+        "Points": [
+            {
+                "Point": { "x": 500, "y": 200 }
+            },
+            {
+                "Point": {"x": 250, "y": 350}
+            },
+            {
+                "Point": {"x": 750, "y": 350}
+            }
+        ],
+        "Steps": [
+            {
+                "CallFunctions": [
+                    {
+                        "Function": "Draw",
+                        "StartPoint": "Start",
+                        "Color": "0xff00ff"
+                    }
+                ]
+            }
+        ]
+    }
+}

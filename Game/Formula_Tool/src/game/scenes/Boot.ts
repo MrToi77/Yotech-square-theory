@@ -17,6 +17,6 @@ export default class Boot extends Scene
 
     create ()
     {
-        this.scene.start('SquareGridScene');
+        this.scene.start('GeoEngine');
     }
 }

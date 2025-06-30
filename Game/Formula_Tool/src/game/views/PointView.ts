@@ -8,35 +8,38 @@ export default class PointView extends Phaser.GameObjects.Container {
         this.point = point;
     } 
 
-    public draw(){
-        const circle = this.scene.add.circle(this.point.x, this.point.y, 10, 0x777222, 1).setScale(0);
-        this.add(circle);
-        this.animCre(circle);
+    public draw() {
+        if (this.phaserPoint) {
+            this.remove(this.phaserPoint, true); // remove & destroy cũ
+        }
+    
+        this.phaserPoint = this.scene.add.circle(this.point.x, this.point.y, 10, 0x777222, 1).setScale(0.5);
+        this.add(this.phaserPoint);
+        this.animCre();
     }
-    public animCre(circle: Phaser.GameObjects.Arc){
+    
+    public animCre() {
         this.scene.tweens.add({
-            targets: circle,
+            targets: this.phaserPoint,
             scaleX: 1,
             scaleY: 1,
             duration: 1000,
-            ease: 'Linear',
-            onComplete: () => {
-                circle.setScale(1);
-            }
+            ease: 'Linear'
         });
-    }
-    public animDes(circle: Phaser.GameObjects.Arc){
+    }; 
+
+    public animDes(){
         this.scene.tweens.add({
-            targets: circle,
+            targets: this.phaserPoint,
             scaleX: 0,
             scaleY: 0,
             duration: 1000,
             ease: 'Power2.easeInOut',
             onComplete: () => {
-                if (circle) {
-                    circle.destroy();
+                if (this.phaserPoint) {
+                    this.phaserPoint.destroy();
                 }else{
-                    console.log("circle is undefined");
+                    console.log("Point is undefined");
                 }
             }
         });
